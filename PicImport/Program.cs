@@ -109,7 +109,7 @@ namespace PicImport
 				else
 				{
 					int suffix = 1;
-					destination = Path.Combine(output, string.Format("{0:0000}/{1:00}/{2:00}/{3}", createdAt.Year, createdAt.Month, createdAt.Day, Path.GetFileNameWithoutExtension(fileName), suffix, Path.GetExtension(fileName)));
+					destination = Path.Combine(output, string.Format("{0:0000}/{1:00}/{2:00}/{3}_{4}{5}", createdAt.Year, createdAt.Month, createdAt.Day, Path.GetFileNameWithoutExtension(fileName), suffix, Path.GetExtension(fileName)));
 					while (File.Exists(destination))
 					{
 						suffix++;
