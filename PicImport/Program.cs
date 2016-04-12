@@ -91,7 +91,7 @@ namespace PicImport
 		private static string GetOutputpath(string inputPath, DateTime createdAt, string output)
 		{
 			var fileName = Path.GetFileName(inputPath);
-			var destination = Path.Combine(output, string.Format("{0:0000}/{1:00}/{2:00}/{3}", createdAt.Year, createdAt.Month, createdAt.Day, fileName));
+			var destination = Path.Combine(output, string.Format("{0:0000}/{1:00}/{2}", createdAt.Year, createdAt.Month, fileName));
 
 			//if the file already exists, see if it's the same
 			if (File.Exists(destination))
@@ -109,7 +109,7 @@ namespace PicImport
 				else
 				{
 					int suffix = 1;
-					destination = Path.Combine(output, string.Format("{0:0000}/{1:00}/{2:00}/{3}_{4}{5}", createdAt.Year, createdAt.Month, createdAt.Day, Path.GetFileNameWithoutExtension(fileName), suffix, Path.GetExtension(fileName)));
+					destination = Path.Combine(output, string.Format("{0:0000}/{1:00}/{2}_{3}{4}", createdAt.Year, createdAt.Month, Path.GetFileNameWithoutExtension(fileName), suffix, Path.GetExtension(fileName)));
 					while (File.Exists(destination))
 					{
 						suffix++;
