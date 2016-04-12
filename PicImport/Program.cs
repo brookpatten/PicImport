@@ -78,6 +78,8 @@ namespace PicImport
 						 Directory.CreateDirectory(Path.GetDirectoryName(item.Item2));
 					 }
 					 File.Copy(item.Item1, item.Item2);
+					 Console.WriteLine("Copied "item.Item1 + " to " + item.Item2);
+					 Console.ReadLine();
 				 }
 				 catch (Exception ex)
 				 {
