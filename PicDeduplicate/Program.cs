@@ -31,7 +31,7 @@ namespace PicDeduplicate
 
 			bool move = args.Length > 2 && args[1] == "move" && !string.IsNullOrEmpty(args[2]);
 
-			string moveDir = args[2];
+			string moveDir = move ? args[2] : null;
 
 			foreach (var g in groupsWithDuplicates)
 			{
