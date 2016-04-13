@@ -29,6 +29,10 @@ namespace PicDeduplicate
 
 			bool remove = args.Length > 1 && args[1] == "remove";
 
+			bool move = args.Length > 2 && args[1] == "move" && !string.IsNullOrEmpty(args[2]);
+
+			string moveDir = args[2];
+
 			foreach (var g in groupsWithDuplicates)
 			{
 				var duplicates = g.OrderBy(x=>x.Name.Length)
@@ -37,10 +41,33 @@ namespace PicDeduplicate
 				                      .ToList();
 				foreach (var d in duplicates)
 				{
-					if (remove)
+					if (move)
+					{
+						if (!Directory.Exists(moveDir))
+						{
+							Directory.CreateDirectory(moveDir);
+						}
+
+						string destination = Path.Combine(moveDir, d.Name);
+						int suffix = 1;
+						while (File.Exists(destination))
+						{
+							destination = Path.Combine(moveDir, string.Format("{0}_{1:00}{2}",Path.GetFileNameWithoutExtension(d.Name),suffix,Path.GetExtension(d.Name)));
+							suffix++;
+						}
+						File.Move(d.Path, destination);
+					}
+					else if (remove)
 					{
 						File.Delete(d.Path);
 					}
+
+					//also remove any folders that we left empty
+					if ((move || remove) && Directory.GetFiles(Path.GetDirectoryName(d.Path)).Count() == 0)
+					{
+						Directory.Delete(Path.GetDirectoryName(d.Path));
+					}
+
 					Console.WriteLine(d.Path);
 				}
 			}
@@ -74,6 +101,5 @@ namespace PicDeduplicate
 		public string Name { get; set; }
 		public string Path { get; set; }
 		public long Length { get; set; }
-		public string Hash { get; set; }
 	}
 }

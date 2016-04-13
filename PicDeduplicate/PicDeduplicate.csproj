@@ -19,7 +19,7 @@
     <WarningLevel>4</WarningLevel>
     <ExternalConsole>true</ExternalConsole>
     <PlatformTarget>x86</PlatformTarget>
-    <Commandlineparameters>~/Desktop/test remove</Commandlineparameters>
+    <Commandlineparameters>~/Desktop/test move ~/Desktop/dups</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <Optimize>true</Optimize>
