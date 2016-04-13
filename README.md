@@ -1,5 +1,5 @@
 # Brook's Crappy Photo Library Utilities
-Quick &amp; Dirty Console apps I use to manage my photo library.
+Quick &amp; Dirty Console apps I use to manage my photo library after getting fed up with other tools.
 
 Seriously don't use these, destroy your pictures, and then be mad at me.
 
