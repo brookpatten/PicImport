@@ -1,7 +1,7 @@
 # Brook's Crappy Photo Library Utilities
 Quick &amp; Dirty Console apps I use to manage my photo library after getting fed up with other tools.
 
-Seriously don't use these, destroy your pictures, and then be mad at me.  The only reason this repo is public is because I don't want to pay for it :P  There's probably much better tools out there.  Move along.
+Seriously don't use these, destroy your pictures, and then be mad at me.  There are no tests, there aren't even any classes.  The only reason this repo is public is because I don't want to pay for it :P  There are much better tools out there.  Move along.
 
 I warned you.
 
