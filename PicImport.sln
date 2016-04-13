@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicImport", "PicImport\PicImport.csproj", "{393D4714-01CA-437B-ABA5-4692A0F9424B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicDeduplicate", "PicDeduplicate\PicDeduplicate.csproj", "{0D15861B-68E5-4612-B87D-FF7BE06DEB1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{393D4714-01CA-437B-ABA5-4692A0F9424B}.Debug|x86.Build.0 = Debug|x86
 		{393D4714-01CA-437B-ABA5-4692A0F9424B}.Release|x86.ActiveCfg = Release|x86
 		{393D4714-01CA-437B-ABA5-4692A0F9424B}.Release|x86.Build.0 = Release|x86
+		{0D15861B-68E5-4612-B87D-FF7BE06DEB1B}.Debug|x86.ActiveCfg = Debug|x86
+		{0D15861B-68E5-4612-B87D-FF7BE06DEB1B}.Debug|x86.Build.0 = Debug|x86
+		{0D15861B-68E5-4612-B87D-FF7BE06DEB1B}.Release|x86.ActiveCfg = Release|x86
+		{0D15861B-68E5-4612-B87D-FF7BE06DEB1B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
